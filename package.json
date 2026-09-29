@@ -1,0 +1,14 @@
+{
+  "name": "null-discord-uno-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A multi-server Discord UNO bot with themed decks and AI opponents.",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test",
+    "register": "node src/register-commands.js"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": { "discord.js": "^14.21.0", "dotenv": "^16.6.1" }
+}
