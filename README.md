@@ -6,7 +6,7 @@ NULL is a real, multi-server Discord bot for UNO-style matches. Each Discord ser
 
 - `/null create` starts a server-local table with a **default, cricket, football, F1, Minecraft, or Pokémon** deck skin. Themes change card faces while retaining standard UNO play rules.
 - `/null join`, `/null add-ai`, and `/null start` support games with humans, NULL_AI, or both.
-- `/null hand` keeps each player's cards private; `/null cards` renders their themed hand as a card gallery; `/null play` and `/null draw` run turns in the channel.
+- `/null hand` keeps each player's cards private; `/null cards` renders their themed hand as a card gallery with an interactive card picker, wild-color menu, and draw button; `/null play` and `/null draw` remain available as command alternatives.
 - `/null status` displays the current card, player card counts, current turn, and deck theme.
 - The game engine automatically handles shuffle/recycling, reverse, skip, draw-two, wild, and wild-draw-four cards. For example, the F1 deck uses Pit Stop, Reverse Grid, Penalty +2, and Safety Car +4 cards; Minecraft uses Creeper, Redstone, Zombie +2, and Ender Dragon +4.
 
@@ -36,7 +36,7 @@ NULL is a real, multi-server Discord bot for UNO-style matches. Each Discord ser
 | `/null add-ai` | Adds a NULL_AI opponent. |
 | `/null start` | Deals seven cards and begins the match. |
 | `/null hand` | Shows the caller's numbered hand privately. |
-| `/null cards` | Shows the caller's themed cards as a private SVG gallery. |
+| `/null cards` | Shows the caller's themed cards privately, with interactive play and draw controls. |
 | `/null play card:<number> [color]` | Plays a numbered card; color is required for wilds. |
 | `/null draw` | Draws one card and ends the turn. |
 | `/null status` | Shows the active match. |
