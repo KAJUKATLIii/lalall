@@ -156,12 +156,6 @@ export class UnoGame {
     if (this.currentPlayer.id !== playerId) throw new Error(`It is ${this.currentPlayer.name}'s turn.`);
   }
 
-  handCards(playerId) {
-    const player = this.players.find((item) => item.id === playerId);
-    if (!player) throw new Error('You are not seated at this table.');
-    return player.hand.map((card) => ({ ...card }));
-  }
-
   handFor(playerId) {
     const player = this.players.find((item) => item.id === playerId);
     if (!player) throw new Error('You are not seated at this table.');

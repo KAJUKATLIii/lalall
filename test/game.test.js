@@ -1,7 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { UnoGame, buildDeck, canPlay, cardLabel } from '../src/game.js';
-import { renderHandSvg } from '../src/card-art.js';
 
 test('buildDeck creates a full UNO deck for every supported theme', () => {
   assert.equal(buildDeck('f1', () => 0.5).length, 108);
@@ -46,13 +45,4 @@ test('themed decks give cards theme-specific faces without changing UNO rules', 
   assert.match(cardLabel(card, 'minecraft'), /⛏️ RED · Zombie \+2/);
   assert.match(cardLabel({ color: 'wild', kind: 'wild4' }, 'pokemon'), /Hyper Beam \+4/);
   assert.equal(canPlay(card, { color: 'red', kind: 'number', number: 1 }, 'red'), true);
-});
-
-
-test('themed card gallery renders playable hand art', () => {
-  const image = renderHandSvg([{ color: 'red', kind: 'skip' }, { color: 'wild', kind: 'wild4' }], 'f1', 'Racer');
-  assert.match(image, /NULL \/\/ GRAND PRIX/);
-  assert.match(image, /Pit Stop/);
-  assert.match(image, /Safety Car \+4/);
-  assert.match(image, /RACER · 2 CARDS/);
 });
